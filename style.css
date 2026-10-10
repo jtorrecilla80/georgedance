@@ -83,5 +83,11 @@ background-repeat:repeat-x;background-position:0 100%,6px 100%,12px 100%;backgro
 .card:hover .im::after{transform:translateX(120%)}
 .kick:before{content:"● ";animation:rec 1.2s steps(2) infinite}
 @keyframes rec{50%{opacity:.2}}
+.about{display:flex;gap:18px;align-items:center;max-width:760px;margin:0 auto 18px;padding:16px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.about .me{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px var(--pink),0 0 24px rgba(255,60,180,.5)}
+.about h2,.how h2{font-size:1.05rem;margin-bottom:6px}.about p{color:var(--muted);font-size:.93rem}
+.how{max-width:760px;margin:0 auto 6px;padding:14px 18px;border-radius:18px;border:1px dashed var(--line)}.how ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem;display:grid;gap:4px}.how b{color:var(--text)}
+.cm{max-width:760px}.fm{width:100%;border:0;border-radius:14px;background:#fff}
+@media(max-width:760px){.about{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media(max-width:760px){.hero .big{width:84px;height:84px;margin-top:38px}body::before{opacity:.25}}
