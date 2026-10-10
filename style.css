@@ -87,7 +87,18 @@ background-repeat:repeat-x;background-position:0 100%,6px 100%,12px 100%;backgro
 .about .me{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px var(--pink),0 0 24px rgba(255,60,180,.5)}
 .about h2,.how h2{font-size:1.05rem;margin-bottom:6px}.about p{color:var(--muted);font-size:.93rem}
 .how{max-width:760px;margin:0 auto 6px;padding:14px 18px;border-radius:18px;border:1px dashed var(--line)}.how ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem;display:grid;gap:4px}.how b{color:var(--text)}
-.cm{max-width:760px}.fm{width:100%;border:0;border-radius:14px;background:#fff}
+.cm{max-width:760px}
 @media(max-width:760px){.about{flex-direction:column;text-align:center}}
+.rate{display:grid;gap:12px;max-width:520px}
+.stars{display:inline-flex;flex-direction:row-reverse;justify-content:flex-end;position:relative}
+.stars input{position:absolute;opacity:0;pointer-events:none}
+.stars label{font-size:2.3rem;line-height:1;color:rgba(255,255,255,.22);cursor:pointer;padding:0 4px;transition:color .12s,transform .12s}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--a);text-shadow:0 0 14px color-mix(in srgb,var(--a) 70%,transparent)}
+.stars label:hover{transform:scale(1.12)}
+.stars input:focus-visible+label{outline:2px solid var(--a);border-radius:6px}
+.rate textarea{width:100%;font:inherit;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;resize:vertical}
+.rate textarea:focus{outline:none;border-color:var(--a);box-shadow:0 0 0 3px color-mix(in srgb,var(--a) 25%,transparent)}
+.rate .btn{justify-self:start;cursor:pointer;font-family:inherit}
+.thx{padding:14px 16px;border-radius:14px;border:1px solid var(--a);color:var(--a);background:color-mix(in srgb,var(--a) 10%,transparent);max-width:520px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media(max-width:760px){.hero .big{width:84px;height:84px;margin-top:38px}body::before{opacity:.25}}
