@@ -50,3 +50,38 @@ ol.tr b{display:block;font-size:.95rem;line-height:1.3}ol.tr span{color:var(--mu
 .nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 0 10px}
 .hide{display:none!important}
 @media(max-width:760px){.sh{grid-template-columns:1fr;gap:20px;text-align:left}.sh .cv{max-width:300px}.two{grid-template-columns:1fr}.top .btn span{display:none}}
+/* ===== ambiente discoteca ===== */
+body{background:radial-gradient(1300px 650px at 50% -10%,#2a0f5a,var(--bg)) fixed;position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;left:50%;top:-30vh;width:160vmax;height:160vmax;margin-left:-80vmax;pointer-events:none;z-index:0;opacity:.34;
+background:conic-gradient(from 0deg at 50% 22%,transparent 0 6deg,rgba(255,60,180,.9) 8deg,transparent 11deg 40deg,rgba(60,220,255,.9) 43deg,transparent 46deg 80deg,rgba(182,255,60,.8) 83deg,transparent 86deg 120deg,rgba(255,138,60,.8) 123deg,transparent 126deg 170deg,rgba(255,60,180,.9) 173deg,transparent 176deg 210deg,rgba(60,220,255,.9) 213deg,transparent 216deg 250deg,rgba(182,255,60,.8) 253deg,transparent 256deg 300deg,rgba(255,138,60,.8) 303deg,transparent 306deg 360deg);
+-webkit-mask-image:radial-gradient(circle at 50% 22%,#000 0,transparent 55%);mask-image:radial-gradient(circle at 50% 22%,#000 0,transparent 55%);animation:sweep 28s linear infinite}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 4px)}
+.wrap,footer{position:relative;z-index:1}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.hero .big{position:relative;width:110px;height:110px;margin-top:46px;border:0;
+background:radial-gradient(circle at 34% 28%,#fff 0 3%,rgba(255,255,255,0) 14%),repeating-linear-gradient(0deg,rgba(10,6,30,.45) 0 2px,transparent 2px 10px),repeating-linear-gradient(90deg,rgba(10,6,30,.45) 0 2px,transparent 2px 10px),radial-gradient(circle at 40% 34%,#f4f0ff,#9b90c8 52%,#2a2152 100%);
+box-shadow:0 0 60px rgba(255,60,180,.55),0 0 120px rgba(60,220,255,.3);animation:ball 6s ease-in-out infinite}
+.hero .big::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:60px;background:linear-gradient(transparent,#b9aedb)}
+.hero .big::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 70% 70%,rgba(255,60,180,.55),transparent 40%),radial-gradient(circle at 25% 65%,rgba(60,220,255,.5),transparent 38%);mix-blend-mode:screen;animation:tint 4s linear infinite alternate}
+@keyframes ball{50%{transform:rotate(8deg) scale(1.03)}}
+@keyframes tint{to{filter:hue-rotate(160deg)}}
+h1{animation:neon 5s infinite}
+@keyframes neon{0%,18%,22%,60%,64%,100%{opacity:1}20%,62%{opacity:.82}}
+.hero::after{content:"";display:block;height:46px;max-width:420px;margin:30px auto 0;
+--b:linear-gradient(90deg,var(--c) 0 5px,transparent 5px);
+background-image:linear-gradient(90deg,var(--pink) 0 5px,transparent 5px),linear-gradient(90deg,var(--cyan) 0 5px,transparent 5px),linear-gradient(90deg,#b6ff3c 0 5px,transparent 5px);
+background-repeat:repeat-x;background-position:0 100%,6px 100%,12px 100%;background-size:18px 40%,18px 90%,18px 60%;opacity:.9;
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);animation:eq 1s ease-in-out infinite alternate}
+@keyframes eq{0%{background-size:18px 40%,18px 90%,18px 60%}50%{background-size:18px 95%,18px 35%,18px 85%}100%{background-size:18px 60%,18px 100%,18px 30%}}
+.sh .cv,.card .im{animation:none}.sh .cv{animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 1px var(--line),0 18px 80px color-mix(in srgb,var(--a) 55%,transparent)}}
+.btn.p{animation:glow 2.4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 42px color-mix(in srgb,var(--a) 75%,transparent)}}
+.chip[aria-pressed=true]{box-shadow:0 0 18px color-mix(in srgb,var(--a) 70%,transparent)}
+.card{backdrop-filter:blur(2px)}
+.card .im::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.22) 50%,transparent 60%);transform:translateX(-120%);transition:transform .7s}
+.card:hover .im::after{transform:translateX(120%)}
+.kick:before{content:"● ";animation:rec 1.2s steps(2) infinite}
+@keyframes rec{50%{opacity:.2}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media(max-width:760px){.hero .big{width:84px;height:84px;margin-top:38px}body::before{opacity:.25}}
