@@ -102,3 +102,8 @@ background-repeat:repeat-x;background-position:0 100%,6px 100%,12px 100%;backgro
 .thx{padding:14px 16px;border-radius:14px;border:1px solid var(--a);color:var(--a);background:color-mix(in srgb,var(--a) 10%,transparent);max-width:520px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media(max-width:760px){.hero .big{width:84px;height:84px;margin-top:38px}body::before{opacity:.25}}
+.rate input[type=text],.rate input[type=email]{width:100%;font:inherit;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.rate input[type=text]:focus,.rate input[type=email]:focus{outline:none;border-color:var(--a);box-shadow:0 0 0 3px color-mix(in srgb,var(--a) 25%,transparent)}
+.rate .two2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.rate .two2{grid-template-columns:1fr}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
