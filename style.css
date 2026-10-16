@@ -1,5 +1,5 @@
 :root{--bg:#0c0722;--bg2:#1d0b3d;--text:#f6f2ff;--muted:#b9aedb;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);--pink:#ff3cb4;--cyan:#3cdcff;--a:var(--pink)}
-.g-trance{--a:#3cdcff}.g-valencia{--a:#ff8a3c}.g-latino{--a:#ffcd5a}.g-techno{--a:#b6ff3c}.g-fiesta{--a:#ff3cb4}
+.g-trance{--a:#3cdcff}.g-valencia{--a:#ff8a3c}.g-latino{--a:#ffcd5a}.g-techno{--a:#b6ff3c}.g-fiesta{--a:#ff3cb4}.g-indie{--a:#a78bfa}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
 body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif;color:var(--text);background:radial-gradient(1300px 650px at 50% -10%,var(--bg2),var(--bg)) fixed;min-height:100vh;line-height:1.5}
 a{color:inherit}.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
